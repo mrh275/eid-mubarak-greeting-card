@@ -41,7 +41,7 @@ export default {
     });
     window.addEventListener("scroll", function () {
       let offest = window.pageYOffset;
-      if (offest > 100) {
+      if (offest > 250) {
         document.querySelector(".star-2").classList.remove("star-2-show");
         document.querySelector(".star-6").classList.remove("star-6-show");
         document.querySelector(".star-1").classList.add("star-1-move");
@@ -62,6 +62,8 @@ export default {
         document.querySelector(".open-greet-3").classList.add("greet-show");
         document.querySelector(".ketupat-1").classList.add("show-ketupat");
         document.querySelector(".ketupat-2").classList.add("show-ketupat");
+        document.querySelector(".scroll-nav").style.transform = "translateY(-50px)";
+        document.querySelector(".scroll-nav").style.opacity = "0";
       } else {
         document.querySelector(".star-2").classList.add("star-2-show");
         document.querySelector(".star-6").classList.add("star-6-show");
@@ -83,15 +85,17 @@ export default {
         document.querySelector(".open-greet-3").classList.remove("greet-show");
         document.querySelector(".ketupat-1").classList.remove("show-ketupat");
         document.querySelector(".ketupat-2").classList.remove("show-ketupat");
+        document.querySelector(".scroll-nav").style.transform = "translateY(0)";
+        document.querySelector(".scroll-nav").style.opacity = "1";
       }
 
-      if (offest > 500) {
+      if (offest > 600) {
         document.querySelector(".open-greet-1").classList.remove("greet-show");
         document.querySelector(".open-greet-2").classList.remove("greet-show");
         document.querySelector(".open-greet-3").classList.remove("greet-show");
       }
 
-      if (offest > 800) {
+      if (offest > 850) {
         document.querySelector(".open-greet-1").classList.remove("greet-show");
         document.querySelector(".open-greet-2").classList.remove("greet-show");
         document.querySelector(".open-greet-3").classList.remove("greet-show");
@@ -120,7 +124,7 @@ export default {
     </h1>
   </div>
 
-  <div v-else class="main-wrapper bg-gradient-to-b from-[#f0e3c5] from-[33.33%] via-[#fffbe7] via-[66.66%] to-[#f0e3c5] to-[99.99%] w-full flex justify-center relative h-[300vh]">
+  <div v-else class="main-wrapper bg-gradient-to-b from-[#f0e3c5] from-[33.33%] via-[#fffbe7] via-[66.66%] to-[#f0e3c5] to-[99.99%] w-full flex justify-center relative h-[250vh]">
     <div class="star-wrapper">
       <img src="../assets/img/star-green.png" alt="Bintang Hijauh" class="star star-1 w-9 fixed -top-full left-12" />
       <img src="../assets/img/star-green.png" alt="Bintang Hijauh" class="star star-2 w-7 fixed -top-full left-8" />
@@ -143,7 +147,7 @@ export default {
         & <br />
         Keluarga
       </h5>
-      <span class="text-center block mt-4 text-[#004f3a]">
+      <span class="text-center scroll-nav block mt-4 text-[#004f3a] transition-all ease-in-out duration-[1s]">
         Scroll ke bawah <font-awesome icon="fa-solid fa-arrow-down" class="scroll-arrow"></font-awesome><br />
         <font-awesome icon="fa-solid fa-computer-mouse"></font-awesome>
       </span>
