@@ -85,13 +85,13 @@ export default {
         document.querySelector(".ketupat-2").classList.remove("show-ketupat");
       }
 
-      if (offest > 300) {
+      if (offest > 500) {
         document.querySelector(".open-greet-1").classList.remove("greet-show");
         document.querySelector(".open-greet-2").classList.remove("greet-show");
         document.querySelector(".open-greet-3").classList.remove("greet-show");
       }
 
-      if (offest > 400) {
+      if (offest > 800) {
         document.querySelector(".open-greet-1").classList.remove("greet-show");
         document.querySelector(".open-greet-2").classList.remove("greet-show");
         document.querySelector(".open-greet-3").classList.remove("greet-show");
@@ -139,10 +139,14 @@ export default {
       <h4 class="text-2xl font-bold text-[#004f3a] text-center -translate-y-[220px] opacity-0 transition-all ease-in-out duration-[1.5s]">Selamat Hari Raya</h4>
       <h1 class="eid-text text-6xl text-center mt-6 font-semibold text-[#004f3a] -translate-y-[420px] opacity-0 transition-all ease-in-out duration-[1.7s]">Idul Fitri</h1>
       <h5 class="text-center text-lg font-semibold text-[#004f3a] mt-4 transition-all ease-in-out duration-[1.3s] opacity-0 scale-50">
-        Siti Nursoleha <br />
+        Muhamad Ramdani Hidayatullah <br />
         & <br />
         Keluarga
       </h5>
+      <span class="text-center block mt-4 text-[#004f3a]">
+        Scroll ke bawah <font-awesome icon="fa-solid fa-arrow-down" class="scroll-arrow"></font-awesome><br />
+        <font-awesome icon="fa-solid fa-computer-mouse"></font-awesome>
+      </span>
     </div>
     <div class="long-greetings-wrapper fixed top-[13rem] text-center text-[#004f3a]">
       <h2 class="taqabbal text-xl scale-50 opacity-0 font-semibold mb-6 transition-all ease-in-out duration-[1s]">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَصِيَامَكُمْ</h2>
@@ -199,6 +203,20 @@ export default {
   }
 }
 
+@keyframes bouncing {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(2px);
+  }
+}
+.scroll-arrow {
+  animation-name: bouncing;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
 .tooltips {
   animation-name: fadeinfinite;
   animation-duration: 1.5s;
