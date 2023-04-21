@@ -152,15 +152,15 @@ export default {
         <font-awesome icon="fa-solid fa-computer-mouse"></font-awesome>
       </span>
     </div>
-    <div class="long-greetings-wrapper fixed top-[13rem] text-center text-[#004f3a]">
+    <div class="long-greetings-wrapper fixed top-[10rem] text-center text-[#004f3a]">
       <h2 class="taqabbal text-xl scale-50 opacity-0 font-semibold mb-6 transition-all ease-in-out duration-[1s]">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَصِيَامَكُمْ</h2>
-      <p class="open-greet-1 px-6 font-semibold transition-all scale-50 opacity-0 ease-in-out duration-[1.1s]">Tidak terasa Ramadhan sudah berlalu. Sebulan kita berpuasa, menahan lapar, haus dan menahan dari segala nafsu duniawi.</p>
-      <p class="open-greet-2 font-semibold px-6 transition-all ease-in-out duration-[1.3s] scale-50 opacity-0">
+      <p class="open-greet-1 px-4 font-semibold transition-all scale-50 opacity-0 ease-in-out duration-[1.1s]">Tidak terasa Ramadhan sudah berlalu. Sebulan kita berpuasa, menahan lapar, haus dan menahan dari segala nafsu duniawi.</p>
+      <p class="open-greet-2 font-semibold px-4 transition-all ease-in-out duration-[1.3s] scale-50 opacity-0">
         Kita diuji agar dapat merasakan kesusahaan yang diderita saudara kita yang fakir/miskin/hamba sahaya/dll. Dengan begitu membuat kita untuk lebih banyak-banyak bersyukur atas apa yang kita miliki.
       </p>
-      <p class="open-greet-3 font-semibold transition-all ease-in-out px-6 duration-[1.5s] scale-50 opacity-0">Semoga dengan Ramadhan ini kita menjadi pribadi yang lebih baik lagi. Pribadi yang lebih dekat dengan sang pencipta yaitu Allah SWT.</p>
+      <p class="open-greet-3 font-semibold transition-all ease-in-out px-4 duration-[1.5s] scale-50 opacity-0">Semoga dengan Ramadhan ini kita menjadi pribadi yang lebih baik lagi. Pribadi yang lebih dekat dengan sang pencipta yaitu Allah SWT.</p>
     </div>
-    <div class="long-greetings-wrapper-2 fixed top-[13rem] text-center text-[#004f3a]">
+    <div class="long-greetings-wrapper-2 fixed top-[10rem] text-center text-[#004f3a]">
       <h2 class="taqabbal text-xl scale-50 opacity-0 font-semibold mb-6 transition-all ease-in-out duration-[1s]">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَصِيَامَكُمْ</h2>
       <p class="open-greet-4 px-6 font-semibold transition-all scale-50 opacity-0 ease-in-out duration-[1.1s]">Kami segenap keluarga mengucapkan,</p>
       <p class="font-bold my-2 text-xl px-6 transition-all ease-in-out duration-[1.3s] scale-50 opacity-0 forgive">Mohon Maaf Lahir Batin</p>
