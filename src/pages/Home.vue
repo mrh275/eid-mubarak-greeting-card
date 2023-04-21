@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       playButton: "fa fa-play",
+      windowWidth: window.innerWidth,
     };
   },
   methods: {
@@ -21,6 +22,10 @@ export default {
     },
   },
   mounted() {
+    if (this.windowWidth > 520) {
+      document.querySelector(".tooltips").style.display = "none";
+      document.querySelector(".play-audio").style.display = "none";
+    }
     window.addEventListener("load", function () {
       document.querySelector(".star-1").classList.add("star-1-show");
       document.querySelector(".star-2").classList.add("star-2-show");
@@ -108,7 +113,14 @@ export default {
 </script>
 
 <template>
-  <div class="main-wrapper bg-gradient-to-b from-[#f0e3c5] from-[33.33%] via-[#fffbe7] via-[66.66%] to-[#f0e3c5] to-[99.99%] w-full flex justify-center relative h-[300vh]">
+  <div v-if="windowWidth > 520" class="prevent-desktop w-screen h-screen flex justify-center items-center bg-[#f0e3c5]">
+    <h1 class="text-5xl font-bold text-center my-auto mx-auto">
+      Laman hanya bisa dibuka menggunakan ponsel! <br />
+      Silahkan buka kembali menggunakan ponsel anda.
+    </h1>
+  </div>
+
+  <div v-else class="main-wrapper bg-gradient-to-b from-[#f0e3c5] from-[33.33%] via-[#fffbe7] via-[66.66%] to-[#f0e3c5] to-[99.99%] w-full flex justify-center relative h-[300vh]">
     <div class="star-wrapper">
       <img src="../assets/img/star-green.png" alt="Bintang Hijauh" class="star star-1 w-9 fixed -top-full left-12" />
       <img src="../assets/img/star-green.png" alt="Bintang Hijauh" class="star star-2 w-7 fixed -top-full left-8" />
