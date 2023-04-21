@@ -12,9 +12,11 @@ export default {
       if (audio.paused) {
         audio.play();
         this.playButton = "fa fa-pause";
+        document.querySelector(".tooltips").style.display = "none";
       } else {
         audio.pause();
         this.playButton = "fa fa-play";
+        document.querySelector(".tooltips").style.display = "block";
       }
     },
   },
@@ -48,11 +50,11 @@ export default {
         document.querySelector(".bg-masjid-1").style.transform = "translateY(80px)";
         document.querySelector(".bg-masjid-2").style.transform = "translateY(80px)";
         document.querySelector(".masjid").style.transform = "translateY(80px)";
-        document.querySelector(".greetings-wrapper h5").style.transform = "translateY(120px) scale(0.8)";
+        document.querySelector(".greetings-wrapper h5").style.transform = "translateY(180px) scale(0.8)";
         document.querySelector(".taqabbal").classList.add("greet-show");
-        document.querySelector(".open-greet").classList.add("greet-show");
-        document.querySelector(".forgive").classList.add("greet-show");
-        document.querySelector(".desc-greet").classList.add("greet-show");
+        document.querySelector(".open-greet-1").classList.add("greet-show");
+        document.querySelector(".open-greet-2").classList.add("greet-show");
+        document.querySelector(".open-greet-3").classList.add("greet-show");
         document.querySelector(".ketupat-1").classList.add("show-ketupat");
         document.querySelector(".ketupat-2").classList.add("show-ketupat");
       } else {
@@ -71,11 +73,31 @@ export default {
         document.querySelector(".masjid").style.transform = "translateY(0px)";
         document.querySelector(".greetings-wrapper h5").style.transform = "translateY(0px) scale(1)";
         document.querySelector(".taqabbal").classList.remove("greet-show");
-        document.querySelector(".open-greet").classList.remove("greet-show");
-        document.querySelector(".forgive").classList.remove("greet-show");
-        document.querySelector(".desc-greet").classList.remove("greet-show");
+        document.querySelector(".open-greet-1").classList.remove("greet-show");
+        document.querySelector(".open-greet-2").classList.remove("greet-show");
+        document.querySelector(".open-greet-3").classList.remove("greet-show");
         document.querySelector(".ketupat-1").classList.remove("show-ketupat");
         document.querySelector(".ketupat-2").classList.remove("show-ketupat");
+      }
+
+      if (offest > 300) {
+        document.querySelector(".open-greet-1").classList.remove("greet-show");
+        document.querySelector(".open-greet-2").classList.remove("greet-show");
+        document.querySelector(".open-greet-3").classList.remove("greet-show");
+      }
+
+      if (offest > 400) {
+        document.querySelector(".open-greet-1").classList.remove("greet-show");
+        document.querySelector(".open-greet-2").classList.remove("greet-show");
+        document.querySelector(".open-greet-3").classList.remove("greet-show");
+        document.querySelector(".open-greet-4").classList.add("greet-show");
+        document.querySelector(".forgive").classList.add("greet-show");
+        document.querySelector(".desc-greet").classList.add("greet-show");
+        document.querySelector(".greetings-wrapper h5").style.transform = "translateY(150px)";
+      } else {
+        document.querySelector(".open-greet-4").classList.remove("greet-show");
+        document.querySelector(".forgive").classList.remove("greet-show");
+        document.querySelector(".desc-greet").classList.remove("greet-show");
       }
     });
     // window.addEventListener("load", (event) => {
@@ -86,7 +108,7 @@ export default {
 </script>
 
 <template>
-  <div class="main-wrapper bg-gradient-to-b from-[#f0e3c5] from-[33.33%] via-[#fffbe7] via-[66.66%] to-[#f0e3c5] to-[99.99%] w-full flex justify-center relative h-[150vh]">
+  <div class="main-wrapper bg-gradient-to-b from-[#f0e3c5] from-[33.33%] via-[#fffbe7] via-[66.66%] to-[#f0e3c5] to-[99.99%] w-full flex justify-center relative h-[300vh]">
     <div class="star-wrapper">
       <img src="../assets/img/star-green.png" alt="Bintang Hijauh" class="star star-1 w-9 fixed -top-full left-12" />
       <img src="../assets/img/star-green.png" alt="Bintang Hijauh" class="star star-2 w-7 fixed -top-full left-8" />
@@ -112,10 +134,19 @@ export default {
     </div>
     <div class="long-greetings-wrapper fixed top-[13rem] text-center text-[#004f3a]">
       <h2 class="taqabbal text-xl scale-50 opacity-0 font-semibold mb-6 transition-all ease-in-out duration-[1s]">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَصِيَامَكُمْ</h2>
-      <p class="open-greet px-6 font-semibold transition-all scale-50 opacity-0 ease-in-out duration-[1.1s]">Kami segenap keluarga mengucapkan,</p>
+      <p class="open-greet-1 px-6 font-semibold transition-all scale-50 opacity-0 ease-in-out duration-[1.1s]">Tidak terasa Ramadhan sudah berlalu. Sebulan kita berpuasa, menahan lapar, haus dan menahan dari segala nafsu duniawi.</p>
+      <p class="open-greet-2 font-semibold px-6 transition-all ease-in-out duration-[1.3s] scale-50 opacity-0">
+        Kita diuji agar dapat merasakan kesusahaan yang diderita saudara kita yang fakir/miskin/hamba sahaya/dll. Dengan begitu membuat kita untuk lebih banyak-banyak bersyukur atas apa yang kita miliki.
+      </p>
+      <p class="open-greet-3 font-semibold transition-all ease-in-out px-6 duration-[1.5s] scale-50 opacity-0">Semoga dengan Ramadhan ini kita menjadi pribadi yang lebih baik lagi. Pribadi yang lebih dekat dengan sang pencipta yaitu Allah SWT.</p>
+    </div>
+    <div class="long-greetings-wrapper-2 fixed top-[13rem] text-center text-[#004f3a]">
+      <h2 class="taqabbal text-xl scale-50 opacity-0 font-semibold mb-6 transition-all ease-in-out duration-[1s]">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَصِيَامَكُمْ</h2>
+      <p class="open-greet-4 px-6 font-semibold transition-all scale-50 opacity-0 ease-in-out duration-[1.1s]">Kami segenap keluarga mengucapkan,</p>
       <p class="font-bold my-2 text-xl px-6 transition-all ease-in-out duration-[1.3s] scale-50 opacity-0 forgive">Mohon Maaf Lahir Batin</p>
       <p class="font-semibold transition-all ease-in-out px-6 duration-[1.5s] desc-greet scale-50 opacity-0">
-        Bila mana kami yang tidak bisa luput dari kesalahan, baik yang disengaja maupun tidak disengaja. Semoga semua dosa-dosa kita diampuni oleh Allah SWT dan kita kembali fitri.
+        Bila mana kami yang tidak bisa luput dari kesalahan, baik yang disengaja maupun tidak disengaja. Semoga semua dosa-dosa kita diampuni oleh Allah SWT dan kita kembali fitri.<br />
+        Semoga kita dipertemukan kembali dengan Ramadhan selanjutnya. Aamiinn.
       </p>
     </div>
     <div class="masjid-bg fixed flex justify-center bottom-0 w-full">
@@ -127,6 +158,7 @@ export default {
     </div>
   </div>
   <audio src="../assets/audio/audio.mp3"></audio>
+  <span class="tooltips fixed right-2 bottom-40 bg-[#004f3a] text-white px-1 py-0.5 rounded-md">Play me!</span>
   <button @click="playAudio" class="play-audio px-3 py-1.5 bg-[#004f3a] fixed bottom-28 right-5 text-white rounded-full cursor-pointer">
     <font-awesome :icon="playButton"></font-awesome>
   </button>
@@ -136,6 +168,31 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600&display=swap");
 
+.tooltips::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #004f3a transparent transparent transparent;
+}
+@keyframes fadeinfinite {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltips {
+  animation-name: fadeinfinite;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
 .eid-text {
   font-family: "Great Vibes";
 }
