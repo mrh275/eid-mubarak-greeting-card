@@ -139,7 +139,7 @@ export default {
       <h4 class="text-2xl font-bold text-[#004f3a] text-center -translate-y-[220px] opacity-0 transition-all ease-in-out duration-[1.5s]">Selamat Hari Raya</h4>
       <h1 class="eid-text text-6xl text-center mt-6 font-semibold text-[#004f3a] -translate-y-[420px] opacity-0 transition-all ease-in-out duration-[1.7s]">Idul Fitri</h1>
       <h5 class="text-center text-lg font-semibold text-[#004f3a] mt-4 transition-all ease-in-out duration-[1.3s] opacity-0 scale-50">
-        Muhamad Ramdani Hidayatullah <br />
+        Siti Nursoleha <br />
         & <br />
         Keluarga
       </h5>
